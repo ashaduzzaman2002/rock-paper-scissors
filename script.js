@@ -52,7 +52,8 @@ const showResutl = (score, playerChoice, computerChoice) => {
             break;
     }
 
-    playerScore.innerText = `Your score: ${Number(totalScore['playerTotalScore']) + score}`
+    totalScore['playerTotalScore'] += score
+    playerScore.innerText = `Your score: ${totalScore['playerTotalScore']}`
     hands.innerText = `👱 ${playerChoice} vs 🤖 ${computerChoice}`
 }
 
